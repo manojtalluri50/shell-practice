@@ -7,3 +7,6 @@ echo "Second Movie: ${MOVIES[1]}"
 echo "Third Movie: ${MOVIES[2]}"
 
 echo "All movies: ${MOVIES[@]}"
+
+
+# $number==${number} 
