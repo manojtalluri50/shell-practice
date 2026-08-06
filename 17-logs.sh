@@ -50,7 +50,7 @@ then
     dnf install python3 -y &>>$LOG_FILE
     VALIDATE $? "Python3"
 else
-    echo -e "Nothing to do Python3... $Y Already installed " | tee -a $LOG_FILE
+    echo -e "Nothing to do Python3... $Y Already installed $N" | tee -a $LOG_FILE
 fi
 
 dnf list installed nginx &>>$LOG_FILE
