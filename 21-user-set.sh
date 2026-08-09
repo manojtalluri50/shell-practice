@@ -7,6 +7,7 @@ failure(){
 }
 
 trap 'failure "${LINENO} ${BASH_COMMAND}"' ERR
+ # ERR is a signal which searches for the error then  it signals to trap function and it executes the failure function
 
 START_TIME=$(date +%s)
 USERID=$(id -u)
