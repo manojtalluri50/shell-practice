@@ -11,5 +11,5 @@
 
 while IFS= read -r line
 do 
-
-done < 21-user-set.sh
+    echo $line
+done < 20-set.sh
