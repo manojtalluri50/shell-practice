@@ -13,22 +13,6 @@ LOGS_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
 
-CHECK_ROOT
-
-mkdir -p $LOGS_FOLDER
-
-USAGE(){
-    echo -e "$R USAGE:: $N sh 24-backup.sh <source-dir> <destination-dir> <days(optional)>"
-}
-
-if [ $# -lt 2 ]
-then
-    USAGE
-fi
-
-
-
-
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
@@ -49,3 +33,20 @@ CHECK_ROOT(){
     fi
 
 }
+
+CHECK_ROOT
+
+mkdir -p $LOGS_FOLDER
+
+USAGE(){
+    echo -e "$R USAGE:: $N sh 24-backup.sh <source-dir> <destination-dir> <days(optional)>"
+}
+
+if [ $# -lt 2 ]
+then
+    USAGE
+fi
+
+
+
+
